@@ -10,7 +10,9 @@ descargar el proyecto y ejecutar
   mvn clean install 
 
 Y a continuacion correr:
-
+  java -jar target/app-carrocompra-soytul-0.0.1-SNAPSHOT.jar
+o
+  mvn spring-boot:run
 
 Puedes ver la base de datos entrando:
   http://localhost:8080/h2
