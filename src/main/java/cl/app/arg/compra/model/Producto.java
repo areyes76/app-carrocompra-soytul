@@ -12,6 +12,8 @@ public class Producto {
     @JsonProperty("id")
     private String UUID;
     private String nombre;
+    private String sku;
+    private String descripcion;
     private Long cantidad;
     private Double precio;
     private boolean descuento;
@@ -54,5 +56,21 @@ public class Producto {
 
     public void setDescuento(boolean descuento) {
         this.descuento = descuento;
+    }
+
+    public String getSku() {
+        return sku;
+    }
+
+    public void setSku(String sku) {
+        this.sku = sku;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }

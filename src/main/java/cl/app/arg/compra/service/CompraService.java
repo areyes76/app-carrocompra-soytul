@@ -5,6 +5,7 @@ import cl.app.arg.compra.model.Producto;
 import cl.app.arg.compra.repository.CompraRepository;
 import cl.app.arg.compra.repository.DetalleCompraRepository;
 
+import cl.app.arg.compra.util.Estado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -37,6 +38,7 @@ public class CompraService{
     @Transactional(readOnly = false)
     public Compra save(Compra compra) {
         compra.setFchCrea(new Date());
+        compra.setEstado(Estado.Completado.toString());
         compra.setTotal(
                 compra.getListaDetalleCompra()
                         .stream()

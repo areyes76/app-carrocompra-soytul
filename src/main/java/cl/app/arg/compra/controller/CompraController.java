@@ -28,10 +28,6 @@ public class CompraController {
 
     @PostMapping(value = "/register")
     public ResponseEntity<Compra> save(@RequestBody Compra compra) {
-
-
-
-
         return new ResponseEntity<Compra>(this.compraService.save(compra), HttpStatus.CREATED);
     }
 }

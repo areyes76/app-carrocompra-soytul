@@ -16,6 +16,7 @@ public class Compra {
     private Long id;
     private Date fchCrea;
     private Double total;
+    private String estado;
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "compra")
     private List<DetalleCompra> listaDetalleCompra;
     @ManyToOne
@@ -59,5 +60,13 @@ public class Compra {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 }
